@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //dãy fibonacci là gì : đây là dãy mà số liền sau bằng tổng 2 số liền trước
+    // dãy này có thể bắt đầu từ 1 hoặc từ 0
+    //1,1,2,3,5,8,...
+    //0,1,1,2,3,5,8,...
+
+    let number1 = 1
+    let number2 = 0
+    let count = 1
+    let n = +prompt("Nhap so luong can in:")
+    while (count <= n) {
+        let result = number1 + number2
+        number1 = number2
+        number2 = result
+        console.log("So fibonacci thu " + count + "la: " + number1)
+        count++
+    }
+</script>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>BMI</h2>
+    Chiều cao: <input type="text" id="chieucao">
+    <br>Cân nặng: <input type="text" id="cannang">
+    <h2 id="result"></h2>
+    <button onclick="TinhBMI()">Tính</button>
+</body>
+<script>
+    function TinhBMI() {
+        let chieucao = document.getElementById("chieucao").value
+        let cannang = document.getElementById("cannang").value
+        let BMI
+        let bmi = cannang / Math.pow((chieucao / 100), 2)
+        if (bmi > 40) {
+            BMI = "Béo phì độ III"
+        } else if (bmi >= 35) {
+            BMI = "Béo phì độ II"
+        } else if (bmi >= 30) {
+            BMI = "Béo phì độ I"
+        } else if (bmi >= 25) {
+            BMI = "Thừa cân"
+        } else if (bmi >= 18.5) {
+            BMI = "Bình thường"
+        } else if (bmi >= 17) {
+            BMI = "Gầy độ I"
+        } else if (bmi >= 16) {
+            BMI = "Gầy độ II"
+        } else {
+            BMI = "Gầy độ III"
+        }
+        document.getElementById("result").innerHTML = BMI
+    }
+</script>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <label for="so_tien_vay">Số tiền vay: </label>
+    <input type="number" id="so_tien_vay">
+    <label for="so_nam">Số năm: </label>
+    <input type="number" id="so_nam">
+    <h1 id="tien_lai"></h1>
+    <button onclick="tinh()">Tính</button>
+
+    <script>
+        function tinh() 
+        {
+            let so_tien_vay = parseFloat(document.getElementById("so_tien_vay").value);
+
+            let so_nam = parseInt(document.getElementById("so_nam").value);
+            let lai_suat = 6.9; 
+            
+            let tien_lai = (so_tien_vay * lai_suat * so_nam) / 100;
+            let tong_tien = so_tien_vay + tien_lai;
+
+            document.getElementById("tien_lai").innerHTML = "Số tiền phải trả sau " + so_nam + " năm là: " + tong_tien.toFixed(2) + " đồng";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!-- Bài 3- Viết chương trình khởi tạo mảng số nguyên. 
+Hiển hiện giá trị lớn nhất trong mảng đó. 
+In ra giá trị trung bình của các phần tử trong mảng. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="cal()">Cal</button>
+
+    <script>
+        function cal() {
+            let n = +prompt("Nhập độ dài mảng muốn tạo: ")
+            let arr = []
+
+            for (let i = 0; i < n; i++) {
+                let data = +prompt("Nhập vào số thứ " + (i + 1) + ":")
+                arr.push(data)
+            }
+
+            console.log(arr)
+
+            let max = arr[0]
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i]
+                }
+            }
+
+            alert("Số lớn nhất trong mảng: " + max)
+
+            let sum = 0
+            for (let count of arr) {
+                sum += count
+            }
+            let avg = sum / arr.length
+
+            alert("Trung bình cộng của mảng: " + avg.toFixed(2))
+        }
+    </script>
+</body>
+
+</html>

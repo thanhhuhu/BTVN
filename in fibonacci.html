@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="count">
+    <p id="result"></p>
+    <button onclick="display_fibonacci()">Display</button>
+</body>
+<script>
+    function display_fibonacci() {
+        let amount = +document.getElementById("count").value
+
+        let number1 = 0
+        let number2 = 1
+        let count = 1
+        let result = "Dãy fibonacci: "
+
+        while (count <= amount) {
+            result += number2 + " "
+            let add = (number1 + number2)
+            number1 = number2
+            number2 = add
+            count++
+
+        }
+        document.getElementById("result").innerHTML = result
+    }
+</script>
+
+</html>

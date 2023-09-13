@@ -1,0 +1,40 @@
+<!-- Bài 6- Viết chương trình khởi tạo/nhập vào một mảng số nguyên
+ gồm 10 phần tử, nhập/tạo phần tử số nguyên V.
+  Chương trình tìm xem V có nằm trong mảng số nguyên không?
+   Nếu V thuộc mảng số nguyên thì in ra 
+"V is in the array" còn lại in ra "V is not in the array". -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="cal()">cal</button>
+</body>
+<script>
+    function cal() {
+        let arr = []
+        for (let i = 0; i < 10; i++) {
+            let data = parseInt(prompt("Nhập vào số thứ " + (i + 1) + ":"))
+            arr.push(data)
+        }
+        console.log(arr)
+        let num = parseInt(prompt("Nhập số cần tìm trong mảng: "))
+        console.log(arr.indexOf(num))
+            //  indexOf: trả về vị trí đầu tiền tìm thấy của 1 phần tử, nếu không thấy trả về -1
+
+        if (arr.indexOf(num) !== -1) {
+            alert("V is in the array")
+        } else {
+            alert("V is not in the array ")
+        }
+    }
+</script>
+
+</html>

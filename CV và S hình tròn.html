@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <label for="radius">Nhập vào bán kính: </label>
+    <input type="number" id="radius">
+    <button onclick="calculateCircle()">Tính</button>
+    <p id="area"></p>
+    <p id="perimeter"></p>
+
+<script>
+    function calculateCircle() {
+        let radius = parseFloat(document.getElementById("radius").value);
+
+        
+        
+            let area = Math.pow(radius, 2) * Math.PI;
+            let perimeter = radius * 2 * Math.PI;
+
+            document.getElementById("area").innerHTML = "Diện tích của hình tròn là: " + area.toFixed(2) + "m2";
+            document.getElementById("perimeter").innerHTML = "Chu vi của hình tròn là: " + perimeter.toFixed(2) + "m";
+        
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h4><b>Số ngày trong tháng </b></h4>
+    <p><input type="number" id="months">
+        <button onclick="Days_of_Months()" id="Days">Tính số ngày</button></p>
+    <h4 id="result"></h4>
+</body>
+<script>
+    function Days_of_Months() {
+        let Month = document.getElementById("months").value
+
+        switch (Month) {
+            case "1":
+            case "3":
+            case "5":
+            case "7":
+            case "8":
+            case "10":
+            case "12":
+            case "12":
+                {
+                    document.getElementById("result").innerHTML = "Tháng " + Month + " có 31 ngày"
+                }
+                break
+            case "4":
+            case "6":
+            case "9":
+            case "11":
+                {
+                    document.getElementById("result").innerHTML = "Tháng " + Month + " có 30 ngày"
+
+                }
+                break
+            case "2":
+                {
+                    document.getElementById("result").innerHTML = "Tháng " + Month + " có 28 ngày hoặc 29 ngày"
+
+                }
+                break
+        }
+    }
+</script>
+
+</html>

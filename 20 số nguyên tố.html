@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function so_nguyen_to() {
+            let number = 0
+
+            for (let count = 1; count <= 20;) {
+                let num = true
+                for (let i = 0; i < num; i++) {
+                    if (num % i == 0) {
+                        num = false
+                        break
+                    }
+                }
+                if (num) {
+                    document.write(num + " ; ")
+                    count++
+                }
+            }
+            number++
+        }
+    </script>
+</body>
+
+</html>

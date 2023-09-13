@@ -1,0 +1,38 @@
+<!-- Bài 4- Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="cal()">cal</button>
+</body>
+
+<script>
+    function cal() {
+        let n = +prompt("Nhập độ dài mảng muốn tạo: ")
+        let arr = [];
+
+        for (let i = 0; i < n; i++) {
+            let data = +prompt("Nhập vào số thứ " + (i + 1) + ":")
+            arr.push(data)
+        }
+
+        console.log("Mảng ban đầu:" + arr)
+
+        for (let i = 0; i < arr.length / 2; i++) {
+            let temp = arr[i]
+            arr[i] = arr[(arr.length - 1) - i]
+            arr[(arr.length) - 1 - i] = temp
+        }
+
+        alert("Mảng sau khi đảo ngược:" + arr)
+    }
+</script>
+
+</html>

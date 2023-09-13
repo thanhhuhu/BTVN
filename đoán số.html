@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="Play()">Play</button>
+</body>
+<script>
+    function Play() {
+        let number = parseFloat(prompt("Nhap vao 1 so tu nhien bat ky, lon hon 1: "))
+
+        let result = (Math.random() * (number - 1) + 1)
+
+        let guest
+        let count = 0
+        let Tinh = 2
+        do {
+            guest = prompt("Nhap gia tri cua ban: ")
+            if (guest < result && count < Tinh) {
+                alert("Tang")
+                count += 1
+            } else if (guest > result && count < Tinh) {
+                alert("Giam")
+                count += 1
+            } else if (guest != result && count == Tinh) {
+                alert("Thua")
+                break
+            } else {
+                alert("Thang")
+                break
+            }
+
+        }
+        while (true)
+    }
+</script>
+
+</html>

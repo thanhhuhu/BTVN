@@ -1,0 +1,39 @@
+<!-- Bài 2- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau.
+    Chương trình hiển thị ra được  phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="cal()">Cal</button>
+</body>
+<script>
+    function cal() {
+        let arr = []
+        for (let i = 0; i < 10; i++) {
+            let data = +prompt("Nhập vào số thứ " + (i + 1) + " : ")
+            if (data = data)
+                arr.push(data)
+        }
+
+        console.log(arr)
+
+        let max = arr[0]
+        let indexMax = 0
+
+        for (let i = 0; i < 10; i++) {
+            if (arr[i] > max) {
+                max = arr[i]
+                indexMax = i
+            }
+        }
+        alert("Số lớn nhất là: " + max + "; vị trí là: " + indexMax)
+    }
+</script>
+
+</html>

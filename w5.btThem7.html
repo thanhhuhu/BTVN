@@ -1,0 +1,44 @@
+<!-- Bài 7- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử,
+ nhập/tạo phần tử số nguyên V. 
+ Chương trình kiểm tra xem V có thuộc mảng đã cho không,
+  nếu V thuộc mảng đã cho xoá V khỏi mảng 
+  (Bản chất việc xoá ở đây tức là dịch phần tử ở bên
+   phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="cal()">Cal</button>
+</body>
+<script>
+    function cal() {
+        let arr = []
+        for (let i = 0; i < 10; i++) {
+            let data = parseInt(prompt("Nhập số thứ " + (i + 1) + ": "))
+            arr.push(data)
+        }
+        console.log(arr)
+        let num = parseInt(prompt("Số nguyên V: "))
+        let index = arr.indexOf(num)
+
+        if (index !== -1) {
+            // Nếu V thuộc mảng thì dịch phần tử bên phải V sang vị trí của V 
+            for (let i = index; i < (10 - 1); i++) {
+                arr[i] = arr[i + 1]
+            }
+            // gán 0 cho phần tử cuối cùng của mảng
+            arr[10 - 1] = 0
+        }
+        alert(arr)
+
+    }
+</script>
+
+</html>

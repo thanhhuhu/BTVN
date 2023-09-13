@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h4>Chuyển đổi giữa Feet và Meters</h4>
+    <form>
+        <label for="unit">Chọn đơn vị:</label>
+        <select name="unit" id="unit">
+            <option value="feetToMeters">Feet sang Meter</option>
+            <option value="metersToFeet">Meters sang Feet</option>
+        </select>
+        <br><br>
+        <label for="inputValue">Nhập giá trị:</label>
+        <input type="number" id="inputValue" name="inputValue">
+        <br><br>
+        <button type="button" onclick="convert()">Chuyển đổi</button>
+    </form>
+    <br>
+    <p id="result"></p>
+
+    <script>
+        function footToMeters(foot) {
+            return foot * 0.305;
+        }
+
+        function metersToFeet(meters) {
+            return meters * 3.279;
+        }
+
+        function convert() {
+            let unit = document.getElementById("unit").value;
+            let inputValue = parseFloat(document.getElementById("inputValue").value);
+            let result;
+
+            if (unit === "feetToMeters") {
+                result = footToMeters(inputValue);
+                document.getElementById("result").innerHTML = inputValue + " feet bằng " + result + " meters";
+            } else if (unit === "metersToFeet") {
+                result = metersToFeet(inputValue);
+                document.getElementById("result").innerHTML = inputValue + " meters bằng " + result + " feet";
+            }
+        }
+    </script>
+</body>
+
+</html>
