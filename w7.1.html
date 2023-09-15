@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nhập số</h1>
+    <input type="number" id="soChan">
+    <button id="sochan" onclick="check()">Kiểm tra</button>
+</body>
+<script>
+    function check ()
+    {
+        let number = document.getElementById("soChan").value 
+        
+        if (number %2 === 0)
+        {
+            alert(number + " là một số chẵn")
+        } else if ( number %2 !=0 )
+        {
+            alert( number + " là một số lẻ")
+        }
+    }
+</script>
+</html>
