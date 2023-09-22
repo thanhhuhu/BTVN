@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle</title>
+    <style>
+        #rectangle {
+            width: 0px;
+            height: 0px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="rectangle"></div>
+
+</body>
+<script>
+    class Rectangle
+    {
+        length
+        width
+
+        constructor(length, width)
+        {
+            this.length = length
+            this.width = width
+        }
+        getWidth() {
+            return this.width
+        }
+
+        getLength() {
+            return this.length
+        }
+         area()
+        {
+            let area1 = this.length * this.width; 
+            alert ("Diện tích của hình chữ nhật là: " + area1 )
+            console.log  ("Diện tích của hình chữ nhật là: " + area1 )
+        }
+
+        perimeter()
+        {
+            let perimeter1 = 2 * (this.length + this.width); 
+            alert("Chu vi của hình chữ nhật là: " + perimeter1 )
+            console.log("Chu vi của hình chữ nhật là: " + perimeter1 )
+        }
+        draw()
+        {
+            let ctx 
+        }
+
+    }
+    let length = +prompt("Nhập chiều dài: " )
+    let width = +prompt("Nhập chiều rộng: ")
+    let rectangle = new Rectangle(length, width)
+
+    let rectangleDiv = document.getElementById("rectangle");
+    rectangleDiv.style.width = length + "px";
+    rectangleDiv.style.height = width + "px";
+
+    rectangle.area()
+    rectangle.perimeter()
+
+   
+</script>
+</html>

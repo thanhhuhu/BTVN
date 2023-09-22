@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="result"></div>
+    <div id="result1"></div>
+
+    <script>
+        class Temperature {
+            constructor(celsius) {
+                this.celsius = celsius;
+            }
+
+            getFahrenheit() {
+                return (this.celsius * 9/5) + 32;
+            }
+
+            getKelvin() {
+                return this.celsius + 273.15;
+            }
+        }   
+
+        let inputTemperature = +prompt("Nhập nhiệt độ (độ C) cần đổi: ");
+        
+        if ( inputTemperature >= -273) {
+            let temperature = new Temperature(inputTemperature);
+            let fahrenheit = temperature.getFahrenheit();
+            let kelvin = temperature.getKelvin();
+            document.getElementById("result").innerHTML = fahrenheit + " độ F ";
+            document.getElementById("result1").innerHTML = kelvin.toFixed(2) + " độ K";
+        } else {
+            alert("Nhiệt độ không hợp lệ. Vui lòng nhập lại.");
+        }
+    </script>
+</body>
+</html>
